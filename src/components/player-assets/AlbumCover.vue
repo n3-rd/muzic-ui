@@ -9,9 +9,10 @@
 <style lang="scss">
 .album-cover{
     // background: red;
+
     height: 40vh;
     width: 80vw;
-    margin: 0 auto;
+    margin: 42px auto;
     border-radius: 20px;
     position: relative;
 }

@@ -16,6 +16,7 @@
 
 <div class="player-widgets q-pt-xl">
 <AlbumCover class="q-pt-xl"/>
+<SongInfo class="q-pt-sm q-px-xl"/>
 
 </div>
         
@@ -40,9 +41,11 @@
 
 <script>
 import AlbumCover from '../components/player-assets/AlbumCover.vue';
+import SongInfo from '../components/player-assets/SongInfo.vue';
 export default {
     components: {
-        AlbumCover
+        AlbumCover,
+        SongInfo
 },
 }
 </script>
