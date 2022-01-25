@@ -1,7 +1,7 @@
 <template>
  <q-layout view="lHh lpr lFf">
 
-    <div>
+    <div class="player">
         <div class="stylish-underlay">
 
         </div>
@@ -10,7 +10,7 @@
         <q-toolbar class="bg-transparent">
           <q-icon name="eva-arrow-ios-downward" class="q-mr-sm text-dark" size="sm"/>
           <q-toolbar-title class="text-center text-dark poppins-medium">Playing Now</q-toolbar-title>
-          <q-icon name="eva-list" size="sm" />
+          <q-icon name="queue_music" size="sm" />
         </q-toolbar>
       </q-header>
 
@@ -18,6 +18,8 @@
 <AlbumCover class="q-pt-xl"/>
 <SongInfo class="q-pt-sm q-px-xl"/>
 
+<Controls/>
+<Footer/>
 </div>
         
     </div>
@@ -36,16 +38,22 @@
 .q-header{
     background: transparent;
 }
-
+.player{
+  max-height: 100vh;
+}
 </style>
 
 <script>
 import AlbumCover from '../components/player-assets/AlbumCover.vue';
 import SongInfo from '../components/player-assets/SongInfo.vue';
+import Controls from '../components/player-assets/Controls.vue';
+import Footer from '../components/player-assets/Footer.vue';
 export default {
     components: {
         AlbumCover,
-        SongInfo
+        SongInfo,
+        Controls,
+        Footer
 },
 }
 </script>

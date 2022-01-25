@@ -10,9 +10,9 @@
 .album-cover{
     // background: red;
 
-    height: 40vh;
+    height: 45vh;
     width: 80vw;
-    margin: 42px auto;
+    margin: 30px auto;
     border-radius: 20px;
     position: relative;
 }
