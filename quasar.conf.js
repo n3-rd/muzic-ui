@@ -10,6 +10,14 @@
 const ESLintPlugin = require('eslint-webpack-plugin')
 const { configure } = require('quasar/wrappers');
 
+// import Vue from 
+// import VueEvents from 'vue-events'
+const VueEvents = require('vue-events')
+// const Vue = require(Vue)
+// Vue.use(VueEvents)
+require('vue-events')
+
+
 module.exports = configure(function (ctx) {
   return {
     // https://quasar.dev/quasar-cli/supporting-ts

@@ -1,38 +1,53 @@
 // app global css in SCSS form
 
 @font-face {
-    font-family: poppinsmedium;
-    src: url(../fonts/Poppins-Medium.ttf);
+  font-family: poppinsmedium;
+  src: url(../fonts/Poppins-Medium.ttf);
 }
 
 @font-face {
-    font-family: poppinssemibold;
-    src: url(../fonts/Poppins-SemiBold.ttf);
+  font-family: poppinssemibold;
+  src: url(../fonts/Poppins-SemiBold.ttf);
 }
 
-*{
-    background-color: #0B0B0B;
-    color: #E4E4E4;
+* {
+  background-color: #0B0B0B;
+  color: #E4E4E4;
 }
-.bg-transparent{
+
+.bg-transparent {
+  background: transparent;
+
+  * {
     background: transparent;
-    *{
-        background: transparent;
-    }
+  }
 }
-.black-color{
-    color: #0B0B0B;
+
+.black-color {
+  color: #0B0B0B;
 }
+
 .text-dark {
-    color: #0B0B0B !important;
-  }
-  .bg-dark {
-    background: #0B0B0B !important;
-  }
-  .poppins-medium{
-      font-family: poppinsmedium;
-  }
-  .album-cover{
-    background-image: url('../assets/for.jpg');
-    background-size: cover;
-  }
+  color: #0B0B0B !important;
+}
+
+.bg-dark {
+  background: #0B0B0B !important;
+}
+
+.poppins-medium {
+  font-family: poppinsmedium;
+}
+
+.album-cover {
+  background-image: url('../assets/for.jpg');
+  background-size: cover;
+}
+
+.text-brand {
+  color: #B1F241 !important;
+}
+
+.bg-brand {
+  background: #B1F241 !important;
+}
