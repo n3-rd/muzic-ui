@@ -10,10 +10,10 @@
             <q-icon name="eva-repeat" size="sm" />
           </div>
           <div class="col">
-            <q-icon name="eva-shuffle" size="sm" />
+            <q-icon name="mic_external_on" size="sm" />
           </div>
           <div class="col">
-            <q-icon name="eva-clipboard-outline" size="sm" />
+            <q-icon name="speaker_notes" size="sm" />
           </div>
         </div>
       </q-toolbar>

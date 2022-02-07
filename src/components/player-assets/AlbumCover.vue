@@ -1,11 +1,10 @@
 <template>
     <div>
         <!-- <div v-if="album"> -->
-            <album v-model="album">
-<div class="album-cover">
+            <album>
+<div>
 
-                
-        <!-- </div> -->
+            <img :srcset="albumCover" class="album-cover" />
         </div>
                 </album>
             
@@ -20,7 +19,7 @@ const albumCover = document.querySelector('.album-cover');
 export default {
     data(){
       return{
-       album: true
+       albumCover: localStorage.getItem('storedSongDetailsImage'),
       }
     },
     methods: {
@@ -29,13 +28,17 @@ export default {
         albumCover.style.display = 'none'
         console.log(albumCover.style.display)
 
-        }
+        },
+        updateMetaData: function(){
+  setInterval(()=>{
+    this.songArt = localStorage.getItem('storedSongDetailsImage')
+  }, 1000)
+  
+}
     },
-    // events: {
-    //     'nextButtonClickedEvent'(){
-    //         this.nextButtonClicked()
-    //     }
-    // }
+ mounted(){
+     this.updateMetaData();
+ }
 }
 </script>
 
@@ -43,10 +46,11 @@ export default {
 .album-cover{
     // background: red;
 
-    height: 45vh;
+    height: 41vh;
     width: 80vw;
     margin: 30px auto;
     border-radius: 20px;
     position: relative;
+        display: block;
 }
 </style>

@@ -3,7 +3,9 @@
     
     <div>
       <q-list>
-      <q-item v-for="song in songs" :key="song.songId" class="song">
+        <div v-for="song in songs" :key="song.songId" class="song" @click="storePlayerDetails(song.songArt, song.artist, song.songTitle)">
+
+      <q-item  >
         <q-item-section avatar>
           <!-- <q-img src="~assets/for.jpg" :ratio="1"/> -->
           <img :srcset=song.songArt class="song-art">
@@ -13,6 +15,7 @@
         <q-item-label caption class="text-grey-1 song-artist">{{song.artist}}</q-item-label>
         </q-item-section>
       </q-item>
+        </div>
       </q-list>
     </div>
     
@@ -52,6 +55,14 @@ IndexFooter
 
 
   ]
+    }
+  },
+  methods: {
+    storePlayerDetails: function(image, artist, title){
+      localStorage.setItem('storedSongDetailsImage', image);
+      localStorage.setItem('storedSongDetailsArtist', artist);
+      localStorage.setItem('storedSongDetailsTitle', title);
+      console.log(localStorage.getItem('storedSongDetails'))
     }
   }
 })
