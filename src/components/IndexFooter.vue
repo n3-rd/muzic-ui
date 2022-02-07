@@ -15,9 +15,13 @@
               <span class="index-artist" lines="1"> {{artist}} </span> -->
 
               <q-item-section>
-        <q-item-label class="song-name poppins-medium" lines="1">{{title}}</q-item-label>
-        <q-item-label caption class="text-grey-1 song-artist">{{artist}}</q-item-label>
-        </q-item-section>
+                <q-item-label class="song-name poppins-medium" lines="1">{{
+                  title
+                }}</q-item-label>
+                <q-item-label caption class="text-grey-1 song-artist">{{
+                  artist
+                }}</q-item-label>
+              </q-item-section>
             </div>
           </router-link>
         </div>
@@ -49,26 +53,24 @@ a {
 
 <script>
 export default {
-  data(){
-    return{
-      songArt: localStorage.getItem('storedSongDetailsImage'),
-      artist: localStorage.getItem('storedSongDetailsArtist'),
-      title: localStorage.getItem('storedSongDetailsTitle'),
-
-    }
+  data() {
+    return {
+      songArt: localStorage.getItem("storedSongDetailsImage"),
+      artist: localStorage.getItem("storedSongDetailsArtist"),
+      title: localStorage.getItem("storedSongDetailsTitle"),
+    };
   },
   methods: {
-updateMetaData: function(){
-  setInterval(()=>{
-    this.songArt = localStorage.getItem('storedSongDetailsImage'),
-      this.artist = localStorage.getItem('storedSongDetailsArtist'),
-      this.title = localStorage.getItem('storedSongDetailsTitle')
-  }, 1000)
-  
-}
+    updateMetaData: function () {
+      setInterval(() => {
+        (this.songArt = localStorage.getItem("storedSongDetailsImage")),
+          (this.artist = localStorage.getItem("storedSongDetailsArtist")),
+          (this.title = localStorage.getItem("storedSongDetailsTitle"));
+      }, 1000);
+    },
   },
-  mounted(){
+  mounted() {
     this.updateMetaData();
-  }
-}
+  },
+};
 </script>
