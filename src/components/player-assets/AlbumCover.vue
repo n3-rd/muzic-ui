@@ -47,7 +47,7 @@ export default {
     // background: red;
 
     height: 41vh;
-    width: 80vw;
+    width: 83vw;
     margin: 30px auto;
     border-radius: 20px;
     position: relative;
