@@ -12,8 +12,8 @@
           <router-link to="/">
             <q-icon
               name="eva-arrow-ios-downward"
-              class="q-mr-sm text-dark"
-              size="sm close-player"
+              class="q-mr-sm text-dark close-player"
+              size="lg"
               @click="closePlayerFunction"
             />
           </router-link>
@@ -68,7 +68,7 @@ export default {
   },
   methods: {
     closePlayerFunction: function () {
-      const closePlayer = window.document.querySelector(".close-player");
+      const closePlayer = document.querySelector(".close-player");
       console.log(closePlayer);
     },
     setStartupItems: function () {
@@ -93,6 +93,7 @@ export default {
 .player-close {
   animation-name: closeplayer;
   animation-duration: 1s;
+  font-size: 44px;
 }
 
 @keyframes easeplayer {

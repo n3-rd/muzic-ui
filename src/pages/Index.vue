@@ -1,5 +1,5 @@
 <template>
-  <q-page class="">
+  <q-page class="reveal-page">
     <div>
       <q-list>
         <div

@@ -51,3 +51,18 @@
 .bg-brand {
   background: #B1F241 !important;
 }
+
+.reveal-page {
+  animation-name: revealPage;
+  animation-duration: 1s;
+  // font-size: 44px;
+}
+
+@keyframes revealPage {
+  0% {
+    margin-top: 100vh;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
