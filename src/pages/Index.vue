@@ -122,6 +122,30 @@ export default defineComponent({
           songArt: "img/13.jpg 9x",
           songId: "uid()",
         },
+        {
+          artist: "Khalid",
+          songTitle: "Saturday Nights",
+          songArt: "img/14.jpg 9x",
+          songId: "uid()",
+        },
+        {
+          artist: "MØ",
+          songTitle: "Blur",
+          songArt: "img/15.jpg 9x",
+          songId: "uid()",
+        },
+        {
+          artist: "Bob Marley & The Wailers",
+          songTitle: "Three Little Birds",
+          songArt: "img/16.jpg 9x",
+          songId: "uid()",
+        },
+         {
+          artist: "James Blunt",
+          songTitle: "Goodbye My Lover",
+          songArt: "img/17.jpg 9x",
+          songId: "uid()",
+        },
       ],
     };
   },
@@ -132,6 +156,10 @@ export default defineComponent({
       localStorage.setItem("storedSongDetailsTitle", title);
       console.log(localStorage.getItem("storedSongDetails"));
     },
+    getTopCharts: function(){
+      fetch('https://api.deezer.com/chart/0/tracks')
+      .then(response => response.json())
+    }
   },
 });
 </script>
